@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link href="./main.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz | CS Scav Hunt</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.13.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <!-- <script defer src="/__/firebase/7.13.2/firebase-auth.js"></script> -->
+    <script defer src="/__/firebase/7.13.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script>
+    <!-- <script defer src="/__/firebase/7.13.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.13.2/firebase-storage.js"></script> -->
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <script defer src="https://cdn.rawgit.com/h2non/jsHashes/master/hashes.js"></script>
+
+  </head>
+  <body class="content-page">
+    <div v-cloak id="app">
+      <v-app id="inspire">
+        <div class="content-page">
+          <v-container>
+            <logo></logo>
+            <question :title="question" :description="description" :image="image"></question>
+            <div class="d-flex flex-row mb-n6">
+              <div class="flex-grow-1">
+                <v-text-field v-model="input" label="Tu respuesta" clearable solo @keyup.enter="sendAnswer()" :disabled="disabled"></v-text-field>
+              </div>
+              <div class="flex-grow-0 ml-2">
+                <v-icon size="48" color="black" @click="sendAnswer()" :disabled="disabled">mdi-send</v-btn>
+              </div>
+            </div>
+            <p class="custom-error">{{ errorText }}</p>
+          </v-container>
+        </div>
+      </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="./api.js"></script>
+    <script src="./question.js"></script>
+    <script src="./logo.js"></script>
+    <script src="./bot.js"></script>
+  </body>
+</html>

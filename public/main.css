@@ -1,0 +1,37 @@
+[v-cloak] {
+    display: none; 
+}
+
+.content-main {
+    background: linear-gradient(90deg, rgba(255,163,0,1) 0%, rgba(255,205,71,1) 100%);
+    /* background-color: #F7AF00; */
+    color: black;
+}
+
+.content-page {
+    background: linear-gradient(90deg, rgba(255,163,0,1) 0%, rgba(255,205,71,1) 100%);
+    /* background-color: #F7AF00; */
+    color: black;
+    height: 100%;
+    width: 100%;
+}
+
+.custom-button {
+    color: orange !important;
+    font-size: 20px !important;
+}
+
+.custom-error {
+    color: black;
+    font-family: Verdana;
+    font-style: italic;
+    font-size: 28px;
+}
+
+.v-text-field input {
+    font-size: 1.3em;
+}
+
+.v-text-field label {
+    font-size: 1.3em;
+}

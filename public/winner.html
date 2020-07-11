@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link href="./main.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Winner | CS Scav Hunt</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.13.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <!-- <script defer src="/__/firebase/7.13.2/firebase-auth.js"></script> -->
+    <script defer src="/__/firebase/7.13.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script>
+    <!-- <script defer src="/__/firebase/7.13.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.13.2/firebase-storage.js"></script> -->
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+  </head>
+  <body>
+    <div v-cloak id="app">
+      <v-app id="inspire">
+        <div class="content-page">
+          <v-container>
+            <conclu></conclu>
+          </v-container>
+        </div>
+      </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script> -->
+    <script src="https://cdn.rawgit.com/h2non/jsHashes/master/hashes.js"></script>
+    <script type="text/javascript" src="./qrcode.js"></script>
+    <script src="./api.js"></script>
+    <script src="./logo.js"></script>
+    <script src="./conclu.js"></script>
+    <script src="./winner.js"></script>
+  </body>
+</html>
