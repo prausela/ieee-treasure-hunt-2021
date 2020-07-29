@@ -95,7 +95,9 @@ new Vue({
             if (rta) {
                 this.disabled = false;
                 this.quiz = rta;
-                this.setStartingQuestion();
+                if (this.prevAnswer) {
+                    this.setStartingQuestion();
+                }
                 this.printNextQuestion();
             }
         },
