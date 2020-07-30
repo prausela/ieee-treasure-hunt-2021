@@ -39,6 +39,13 @@ new Vue({
             this.input = '';
         },
         checkAnswer(input, answer) {
+            // No distingue tildes
+            input = input.replace('á', 'a');
+            input = input.replace('é', 'e');
+            input = input.replace('í', 'i');
+            input = input.replace('ó', 'o');
+            input = input.replace('ú', 'u');
+            // Case insensitive
             if (input.toLowerCase() == answer.toLowerCase()) {
                 return true;
             } else {
