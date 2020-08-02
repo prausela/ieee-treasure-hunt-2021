@@ -8,9 +8,9 @@ Vue.component('intro', {
         `<v-container>
             <logo></logo>
             <h3>¡Bienvenido a CS Scavenger Hunt!</h3>
-            <p class="text-justify"> A lo largo de estas X preguntas, estaremos probando tu ingenio y creatividad 
+            <p class="text-justify"> A lo largo de estas <b>25 preguntas</b>, estaremos probando tu ingenio y creatividad 
             para encontrar la respuesta correcta. Solo así podrás avanzar a la pregunta siguiente y 
-            llegar hasta el final de este juego.</br>
+            llegar hasta el final de este juego. Tranqui que no tenés que saber nada informático de antemano.</br>
             <b>¡CUIDADO!</b> Acordate la respuesta de la última pregunta que resolviste, la próxima vez que
             entres la va a necesitar para continuar donde dejaste.</br>
             <b>¿PISTAS?</b> Si te quedás trabado en alguna pregunta, mandá un DM a @computer.society.itba, estamos para servirte.</br>
