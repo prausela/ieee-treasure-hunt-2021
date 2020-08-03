@@ -13,6 +13,7 @@ new Vue({
         quiz: undefined,
         prevAnswer: '',
         algorithm: '',
+        winner: false,
         errorMessages: [
             'Mmm... no.',
             'Palo y afuera.',
@@ -98,6 +99,18 @@ new Vue({
                 return "./winner.html?" + param;
             return "./winner.html";
         },
+
+        generateQr(message) {
+			var typeNumber = 4;
+			var errorCorrectionLevel = 'L';
+			var qr = qrcode(typeNumber, errorCorrectionLevel);
+			qr.addData(message);
+			qr.make();
+			document.getElementById('qr-code-winner').innerHTML = qr.createImgTag(5);
+		},
+		getMessage(code, number) {
+			return code + number + "\n" + this.getHashedParam(code + number.toString(), this.algorithm);
+		},
         async getFull() {
             let rta = await getAll()
                 .catch((error) => {
@@ -113,13 +126,16 @@ new Vue({
             }
         },
 		async goToWinScreen() {
+            this.winner = true;
 			let rta = await getWinningCode()
                 .catch((error) => {
                     console.error(error);
                 });
             if (rta) {
                 this.algorithm = rta.algorithm;
-                window.location.replace(this.getWinUrl(rta.number));
+                // window.location.replace(this.getWinUrl(rta.number));
+                this.generateQr(this.getMessage(rta.code, rta.number));
+                updateWinNumber(rta.number);
             }
 		}
     },
@@ -137,6 +153,7 @@ new Vue({
         this.question = 'Loading...';
         this.image = 'loading.png'
         this.disabled = true;
+        this.winner = false;
         this.getFull();
     }
 })
