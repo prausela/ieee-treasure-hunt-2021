@@ -38,7 +38,7 @@ new Vue({
             }
             this.input = '';
         },
-        checkAnswer(input, answer) {
+        normalizeInput(input) {
             // No distingue tildes
             input = input.replace('á', 'a');
             input = input.replace('é', 'e');
@@ -46,7 +46,11 @@ new Vue({
             input = input.replace('ó', 'o');
             input = input.replace('ú', 'u');
             // Case insensitive
-            if (input.toLowerCase() == answer.toLowerCase()) {
+            return input.toLowerCase();
+        },
+        checkAnswer(input, answer) {
+            // if (this.normalizeInput(input) == answer.toLowerCase()) {
+            if (this.getHashedParam(this.normalizeInput(input), "SHA512") == answer) {
                 return true;
             } else {
                 return false;
@@ -69,27 +73,27 @@ new Vue({
         getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min)) + min;
         },
-        getHashedParam(number) {
-            switch (this.algorithm) {
+        getHashedParam(value, algorithm) {
+            switch (algorithm) {
                 case "MD5":
-                    return new Hashes.MD5().hex(number.toString());
+                    return new Hashes.MD5().hex(value.toString());
                 case "SHA1":
-                    return new Hashes.SHA1().hex(number.toString());
+                    return new Hashes.SHA1().hex(value.toString());
                 case "SHA256":
-                    return new Hashes.SHA256().hex(number.toString());
+                    return new Hashes.SHA256().hex(value.toString());
                 case "SHA512":
-                    return new Hashes.SHA256().hex(number.toString());
+                    return new Hashes.SHA512().hex(value.toString());
                 case "RMD160":
-                    return new Hashes.RMD160().hex(number.toString());
+                    return new Hashes.RMD160().hex(value.toString());
                 case "Base64":
-                    return new Hashes.Base64().hex(number.toString());
+                    return new Hashes.Base64().hex(value.toString());
                 case "CRC32":
                 default:
-                    return new Hashes.CRC32().hex(number.toString());
+                    return new Hashes.CRC32().hex(value.toString());
             }
         },
         getWinUrl(number) {
-            let param = this.getHashedParam(number);
+            let param = this.getHashedParam(number, this.algorithm);
             if (param)
                 return "./winner.html?" + param;
             return "./winner.html";
