@@ -22,7 +22,6 @@ Vue.component('intro', {
         </v-container>`,
     computed: {
         /* Dimensions of the components */
-        // <v-text-field v-on:input="prevAnswer = $event" label="Tu respuesta" clearable background-color="white" solo></v-text-field>
         getSize() {
             return screen.width / 13;
         },

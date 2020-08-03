@@ -8,6 +8,8 @@
   };
   firebase.initializeApp(config);
 
+  // Initialize Cloud Functions through Firebase
+  // var functions = firebase.functions();
   // Get a reference to the database service
   var database = firebase.database();
 
@@ -72,3 +74,31 @@
   function updateWinNumber(number) {
     return api.set('/winning/number', number + 1);
   }
+
+  // function updateWinNumber(number) {
+  //   functions.httpsCallable('updateWinNumber').then(function(result) {
+  //     console.log('success');
+  //   }).catch(function(error) {
+  //     // Getting the Error details.
+  //     var code = error.code;
+  //     var message = error.message;
+  //     var details = error.details;
+  //     console.error('There was an error when calling the Cloud Function:\n\nError Code: '
+  //     + code + '\nError Message:' + message + '\nError Details:' + details);
+  //   });
+  // }
+
+  // function checkAnswer(current, total, input) {
+  //   var validate = functions.httpsCallable('validateAnswer');
+  //   validate({current: current, total: total, input: input}).then(function(result) {
+  //     console.log('success');
+  //     console.log(result);
+  //   }).catch(function(error) {
+  //     // Getting the Error details.
+  //     var code = error.code;
+  //     var message = error.message;
+  //     var details = error.details;
+  //     console.error('There was an error when calling the Cloud Function:\n\nError Code: '
+  //     + code + '\nError Message:' + message + '\nError Details:' + details);
+  //   });
+  // }
