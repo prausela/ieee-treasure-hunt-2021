@@ -149,7 +149,7 @@ new Vue({
         if (!this.prevAnswer) {
             this.prevAnswer = 'init';
         }
-        this.number = '';
+        this.number = '-';
         this.printLoading();
         this.winner = false;
         this.getNextQuestion();
