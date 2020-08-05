@@ -63,14 +63,15 @@
       }
   }
 
-  function getAll() {
-      return api.fetch('/questions');
-  }
-
   function getWinningCode() {
     return api.fetch('/winning');
   }
 
   function updateWinNumber(number) {
     return api.set('/winning/number', number + 1);
+  }
+
+  function getNext(prevAnswer) {
+    prevAnswer = prevAnswer.replace('.', ',');
+    return api.fetch('/reverse/\"' + prevAnswer + '\"')
   }

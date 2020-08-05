@@ -8,12 +8,14 @@ new Vue({
         question: '',
         description: '',
         image: '',
+        answer: '',
         errorText: '',
         wrong: false,
         quiz: undefined,
         prevAnswer: '',
         algorithm: '',
         winner: false,
+        block: undefined,
         errorMessages: [
             'Mmm... no.',
             'Palo y afuera.',
@@ -26,11 +28,14 @@ new Vue({
     }),
     methods: {
         sendAnswer() {
-            if (this.checkAnswer(this.input, this.quiz[this.number].answer)) {
+            this.input = this.normalizeInput(this.input);
+            if (this.checkAnswer(this.input, this.answer)) {
                 this.errorText = '';
+                this.prevAnswer = this.input;
                 this.number++;
-                if (this.number < this.quiz.length) {
-                    this.printNextQuestion();
+                if (this.number <= 25) {
+                    this.printLoading();
+                    this.getNextQuestion();
                 } else {
                     this.goToWinScreen();
                 }
@@ -50,8 +55,7 @@ new Vue({
             return input.toLowerCase();
         },
         checkAnswer(input, answer) {
-            // if (this.normalizeInput(input) == answer.toLowerCase()) {
-            if (this.getHashedParam(this.normalizeInput(input), "SHA512") == answer) {
+            if (this.getHashedParam(input, "SHA512") == answer) {
                 return true;
             } else {
                 return false;
@@ -61,6 +65,21 @@ new Vue({
             this.question = this.number + '. ' + this.quiz[this.number].question;
             this.description = this.quiz[this.number].description;
             this.image = this.quiz[this.number].image;
+        },
+        printNextBlock(block) {
+            this.number = block.number;
+            this.question = this.number + '. ' + block.question;
+            this.description = block.description;
+            this.image = block.image;
+            this.answer = block.answer;
+            this.disabled = false;
+        },
+        printLoading() {
+            this.question = this.number + '. ' + 'Loading...';
+            this.description = '';
+            this.image = 'loading.png';
+            this.answer = '';
+            this.disabled = true;
         },
         setStartingQuestion() {
             for (var aux = 1; aux < this.quiz.length - 1; aux++) {
@@ -110,7 +129,20 @@ new Vue({
 		},
 		getMessage(code, number) {
 			return code + number + "\n" + this.getHashedParam(code + number.toString(), this.algorithm);
-		},
+        },
+
+        async getNextQuestion() {
+            let rta = await getNext(this.prevAnswer)
+                .catch((error) => {
+                    // console.error(error);
+                });
+            if (rta) {
+                this.printNextBlock(rta);
+            } else {
+                this.prevAnswer = 'init';
+                this.getNextQuestion();
+            }
+        },
         async getFull() {
             let rta = await getAll()
                 .catch((error) => {
@@ -150,10 +182,13 @@ new Vue({
     },
     mounted () {
         this.prevAnswer = decodeURIComponent(location.search.substr(1));
-        this.question = 'Loading...';
-        this.image = 'loading.png'
-        this.disabled = true;
+        if (!this.prevAnswer) {
+            this.prevAnswer = 'init';
+        }
+        this.number = '';
+        this.printLoading();
         this.winner = false;
-        this.getFull();
+        // this.getFull();
+        this.getNextQuestion();
     }
 })
