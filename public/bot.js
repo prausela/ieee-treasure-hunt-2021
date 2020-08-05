@@ -10,8 +10,6 @@ new Vue({
         image: '',
         answer: '',
         errorText: '',
-        wrong: false,
-        quiz: undefined,
         prevAnswer: '',
         algorithm: '',
         winner: false,
@@ -61,11 +59,6 @@ new Vue({
                 return false;
             }
         },
-        printNextQuestion() {
-            this.question = this.number + '. ' + this.quiz[this.number].question;
-            this.description = this.quiz[this.number].description;
-            this.image = this.quiz[this.number].image;
-        },
         printNextBlock(block) {
             this.number = block.number;
             this.question = this.number + '. ' + block.question;
@@ -80,14 +73,6 @@ new Vue({
             this.image = 'loading.png';
             this.answer = '';
             this.disabled = true;
-        },
-        setStartingQuestion() {
-            for (var aux = 1; aux < this.quiz.length - 1; aux++) {
-                if (this.checkAnswer(this.prevAnswer, this.quiz[aux].answer)) {
-                    this.number = aux + 1;
-                    break;
-                }
-            }
         },
         // Retorna un número aleatorio entre min (incluido) y max (excluido)
         getRandomInt(min, max) {
@@ -111,12 +96,6 @@ new Vue({
                 default:
                     return new Hashes.CRC32().hex(value.toString());
             }
-        },
-        getWinUrl(number) {
-            let param = this.getHashedParam(number, this.algorithm);
-            if (param)
-                return "./winner.html?" + param;
-            return "./winner.html";
         },
 
         generateQr(message) {
@@ -143,20 +122,6 @@ new Vue({
                 this.getNextQuestion();
             }
         },
-        async getFull() {
-            let rta = await getAll()
-                .catch((error) => {
-                    console.error(error);
-                });
-            if (rta) {
-                this.disabled = false;
-                this.quiz = rta;
-                if (this.prevAnswer) {
-                    this.setStartingQuestion();
-                }
-                this.printNextQuestion();
-            }
-        },
 		async goToWinScreen() {
             this.winner = true;
 			let rta = await getWinningCode()
@@ -165,7 +130,6 @@ new Vue({
                 });
             if (rta) {
                 this.algorithm = rta.algorithm;
-                // window.location.replace(this.getWinUrl(rta.number));
                 this.generateQr(this.getMessage(rta.code, rta.number));
                 updateWinNumber(rta.number);
             }
@@ -188,7 +152,6 @@ new Vue({
         this.number = '';
         this.printLoading();
         this.winner = false;
-        // this.getFull();
         this.getNextQuestion();
     }
 })
