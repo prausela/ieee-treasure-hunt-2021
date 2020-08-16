@@ -38,7 +38,7 @@
 }
 
 .v-expansion-panel {
-    background: linear-gradient(90deg, rgba(255,163,0,1) -10%, rgba(255,205,71,1) 110%);
+    background: linear-gradient(90deg, rgba(255,163,0,1) -30%, rgba(255,205,71,1) 130%);
 }
 
 .v-expansion-panel-header {
