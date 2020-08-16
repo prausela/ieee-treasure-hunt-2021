@@ -37,5 +37,8 @@ main.css - Linea 6:      background: #252525;
 main.css - Linea 9:      color: white;
 main.css - Linea 12:     background: #252525;
 main.css - Linea 14:     color: white;
-main.css - Linea 21:     color: white !important;
 main.css - Linea 26:     color: white;
+main.css - Linea 41: 	 background: linear-gradient(90deg, rgba(37,37,37,1) -30%, rgba(37,37,37,1) 130%);
+main.css - Linea 48:	 color: white;
+main.css - Linea 52:	 color: white;
+questions.html - Linea 38:    <v-icon size="48" color="white" @click="sendAnswer()" :disabled="disabled">mdi-send</v-btn>
