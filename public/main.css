@@ -36,3 +36,13 @@
 .v-text-field label {
     font-size: 1.3em;
 }
+
+.v-expansion-panel {
+    background: linear-gradient(90deg, rgba(255,163,0,1) -10%, rgba(255,205,71,1) 110%);
+}
+
+.v-expansion-panel-header {
+    padding-left: 0px;
+    font-weight: bold;
+    font-size: 16px;
+}
