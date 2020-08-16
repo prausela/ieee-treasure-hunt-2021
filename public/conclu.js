@@ -34,7 +34,7 @@ Vue.component('conclu', {
                 <v-col>
                     <div class="title font-weight-regular font-italic text-center">
                         ¿Querés participar para ganar una GiftCard? </br>
-                        Compartinos esta pantalla con el texto del codigo por DM o subila a tu historia y arrobanos.
+                        Compartinos esta pantalla con el texto del código por DM o subila a tu historia y arrobanos.
                     </div>
                 </v-col>
             </v-row>
