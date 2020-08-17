@@ -13,7 +13,7 @@ Vue.component('intro', {
             llegar hasta el final de este juego. Tranqui que no tenés que saber nada informático de antemano.</br>
             <b>¡CUIDADO!</b> Acordate la respuesta de la última pregunta que resolviste, la próxima vez que
             entres la va a necesitar para continuar donde dejaste.</br>
-            <b>¿PISTAS?</b> Si te quedás trabado en alguna pregunta, mandá un DM a @computer.society.itba, estamos para servirte.</br>
+            <b>¿PISTAS?</b> Si te quedás trabado en alguna pregunta, hablanos a @computer.society.itba, estamos para servirte.</br>
             <v-expansion-panels flat hover>
             <v-expansion-panel>
                 <v-expansion-panel-header>¿Qué está en juego (además de tu honor)?</v-expansion-panel-header>
@@ -26,7 +26,7 @@ Vue.component('intro', {
                 </v-expansion-panel-content>
             </v-expansion-panel>
             </v-expansion-panels>
-            ¡Suerte!
+            ¿Te quedan dudas? Consultanos a @computer.society.itba ¡Suerte!
             </p>
             </br>
             <h4>Si conocés alguna respuesta, ingresala acá antes de comenzar para continuar desde donde dejaste.</h4>

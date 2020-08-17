@@ -10,7 +10,7 @@ intro.js - Linea 8:
             Tranqui que no tenés que saber nada informático de antemano.</br>
             <b>¡CUIDADO!</b> Acordate la respuesta de la última pregunta que resolviste, la próxima vez que
             entres la va a necesitar para continuar donde dejaste.</br>
-            <b>¿PISTAS?</b> Si te quedás trabado en alguna pregunta, mandá un DM a @computer.society.itba, estamos para servirte.</br>
+            <b>¿PISTAS?</b> Si te quedás trabado en alguna pregunta, hablanos a @computer.society.itba, estamos para servirte.</br>
             <v-expansion-panels flat hover>
             <v-expansion-panel>
                 <v-expansion-panel-header>¿Qué está en juego (además de tu honor)?</v-expansion-panel-header>
@@ -18,22 +18,18 @@ intro.js - Linea 8:
                     Nuevamente, las <b>primeras 10</b> personas que suban una historia (arrobándonos, obvio) con la captura de la pantalla
 		    ganadora y nos envíen el texto secreto por privado ganarán <b>1 pista</b> para el Qué ves? Pero eso no es todo. 
                     Si lográs llegar hasta el final antes del <b>Domingo 13/09 a las 23:59</b> y nos compartís 
-		    esa pantalla (junto con el código ganador), ganás <b>1 chance</b> para un sorteo que haremos 
+		    esa pantalla (junto con el código ganador), ganás <b>2 chances</b> para un sorteo que haremos 
                     en breve por una Giftcard.</br>
                 </v-expansion-panel-content>
             </v-expansion-panel>
             </v-expansion-panels>
-            ¡Suerte!
+	    ¿Te quedan dudas? Consultanos a @computer.society.itba ¡Suerte!
             </p>
             </br>
             <h4>Si conocés alguna respuesta, ingresala acá antes de comenzar para continuar desde donde dejaste.</h4>
             
         </v-container>`,
-conclu.js - Linea 35:
-                    <div class="title font-weight-regular font-italic text-center">
-                        ¿Querés participar para ganar una GiftCard? </br>
-                        Compartinos esta pantalla con el texto del codigo por DM o subila a tu historia y arrobanos.
-                    </div>
+
 main.css - Linea 6:      background: #252525;
 main.css - Linea 9:      color: white;
 main.css - Linea 12:     background: #252525;
@@ -43,3 +39,23 @@ main.css - Linea 41: 	 background: linear-gradient(90deg, rgba(37,37,37,1) -30%,
 main.css - Linea 48:	 color: white;
 main.css - Linea 52:	 color: white;
 questions.html - Linea 38:    <v-icon size="48" color="white" @click="sendAnswer()" :disabled="disabled">mdi-send</v-btn>
+
+conclu.js - Linea 35:
+-- Si recién arranca
+                    <div class="title font-weight-regular font-italic text-center">
+			¿Querés ganarte una pista para el Qué ves? y participar para ganar una GiftCard? </br>
+                        Subí una historia (arrobándonos a @computer.society.itba) con una captura de esta pantalla 
+                        y envianos el texto que esconde el Código QR al privado.
+                    </div>
+
+-- Si se terminan las pistas
+                    <div class="title font-weight-regular font-italic text-center">
+			¿Querés participar para ganar una GiftCard? </br>
+                        Compartinos una captura de esta pantalla a @computer.society.itba junto con el código ganador.
+                    </div>
+
+-- Si se termina el tiempo
+                    <div class="title font-weight-regular font-italic text-center">
+			¡Bien jugado! Ésta vez no llegaste a tiempo para los premios, pero la vida da revancha. </br>
+			¡Felicitaciones!
+                    </div>
