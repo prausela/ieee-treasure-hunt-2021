@@ -148,6 +148,8 @@ new Vue({
         this.prevAnswer = decodeURIComponent(location.search.substr(1));
         if (!this.prevAnswer) {
             this.prevAnswer = 'init';
+        } else {
+            this.prevAnswer = this.normalizeInput(this.prevAnswer);
         }
         this.number = '-';
         this.printLoading();
