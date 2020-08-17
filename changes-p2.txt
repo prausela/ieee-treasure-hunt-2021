@@ -32,7 +32,7 @@ intro.js - Linea 8:
         </v-container>`,
 
 main.css - Linea 6:      background: #252525;
-main.css - Linea 9:      color: white;
+main.css - Linea 8:      color: white;
 main.css - Linea 12:     background: #252525;
 main.css - Linea 14:     color: white;
 main.css - Linea 26:     color: white;
