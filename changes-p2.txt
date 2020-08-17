@@ -1,3 +1,4 @@
+Importar archivo JSON p2 a la BD
 bot.js - Línea 34: cambiar 12 a 15
 img - mover logo.png , loading.png y winner.gif de root a /public/img
 intro.js - Linea 8:
@@ -57,5 +58,5 @@ conclu.js - Linea 35:
 -- Si se termina el tiempo
                     <div class="title font-weight-regular font-italic text-center">
 			¡Bien jugado! Ésta vez no llegaste a tiempo para los premios, pero la vida da revancha. </br>
-			¡Felicitaciones!
+			¡Felicidades!
                     </div>
