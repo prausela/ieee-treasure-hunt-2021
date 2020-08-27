@@ -33,7 +33,7 @@ Vue.component('conclu', {
             <v-row class="align-center">
                 <v-col>
                     <div class="title font-weight-regular font-italic text-center">
-                        ¿Querés ganarte una pista para el Qué ves? y participar para ganar una GiftCard? </br>
+                        ¿Querés participar para ganar una GiftCard? </br>
                         Subí una historia (arrobándonos a @computer.society.itba) con una captura de esta pantalla 
                         y envianos el texto que esconde el Código QR al privado.
                     </div>

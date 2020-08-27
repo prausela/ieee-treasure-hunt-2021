@@ -52,7 +52,8 @@ conclu.js - Linea 35:
 -- Si se terminan las pistas
                     <div class="title font-weight-regular font-italic text-center">
 			¿Querés participar para ganar una GiftCard? </br>
-                        Compartinos una captura de esta pantalla a @computer.society.itba junto con el código ganador.
+                        Subí una historia (arrobándonos a @computer.society.itba) con una captura de esta pantalla 
+                        y envianos el texto que esconde el Código QR al privado.
                     </div>
 
 -- Si se termina el tiempo
