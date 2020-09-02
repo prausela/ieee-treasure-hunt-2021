@@ -31,7 +31,7 @@ new Vue({
                 this.errorText = '';
                 this.prevAnswer = this.input;
                 this.number++;
-                if (this.number <= 12) {
+                if (this.number <= 15) {
                     this.printLoading();
                     this.getNextQuestion();
                 } else {

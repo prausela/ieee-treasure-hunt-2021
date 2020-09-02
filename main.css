@@ -3,27 +3,27 @@
 }
 
 .content-main {
-    background: #252525;
+    background: linear-gradient(90deg, rgba(255,163,0,1) 0%, rgba(255,205,71,1) 100%);
     /* background-color: #F7AF00; */
-    color: white;
+    color: black;
 }
 
 .content-page {
-    background: #252525;
+    background: linear-gradient(90deg, rgba(255,163,0,1) 0%, rgba(255,205,71,1) 100%);
     /* background-color: #F7AF00; */
-    color: white;
+    color: black;
     height: 100%;
     width: 100%;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 .custom-button {
-    color: #4bc394 !important;
+    color: orange !important;
     font-size: 20px !important;
 }
 
 .custom-error {
-    color: white;
+    color: black;
     font-family: Verdana;
     font-style: italic;
     font-size: 28px;
@@ -38,16 +38,16 @@
 }
 
 .v-expansion-panel {
-    background: linear-gradient(90deg, rgba(37,37,37,1) -30%, rgba(37,37,37,1) 130%);
+    background: linear-gradient(90deg, rgba(255,163,0,1) -30%, rgba(255,205,71,1) 130%);
 }
 
 .v-expansion-panel-header {
     padding-left: 0px;
     font-weight: bold;
     font-size: 16px;
-    color: white;
+    color: black;
 }
 
 .v-expansion-panel-content {
-    color: white;
+    color: black;
 }
