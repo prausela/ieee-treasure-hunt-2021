@@ -1,0 +1,250 @@
+{
+  "questions" : [ null, {
+    "answer" : "dde1cac870b11aba4da5fc32fd8564ef27209b42a95e3d3c1b591220cd04919a94a45444167bac0b8a013d2a580f61de5f59debfca8c3a5ec84c99e423a3cb75",
+    "description" : "<div style=\"-moz-transform:scaleX(-1); -o-transform:scaleX(-1); -webkit-transform:scaleX(-1); transform:scaleX(-1); filter:FlipH; display: inline-block;\">Capaz esto te sirva</div>",
+    "image" : "riddle2.png",
+    "question" : "¿Llegaste a conocerlo?"
+  }, {
+    "answer" : "1ded1676e462f0e6d77ad45d57bb123a807fcf966f22317b283a7d62881010db29715fb193f3efd6ff4728e2cf2ffec6e9e08c34c62675876fbcdacbbf0c2f08",
+    "description" : "<div><label for=\"uname\"><b>Username </b></label><input type=\"text\" placeholder=\"Enter Username\" name=\"uname\" value=\"Computer Society\" required></br><label for=\"psw\"> <b>Password </b></label><input type=\"password\" placeholder=\"Enter Password\" name=\"psw\" value=\"S3CR3T-P4S5W0RD\" required></br><v-btn color=\"black\" dark rounded class=\"custom-button\">Login</v-btn></div>",
+    "image" : "",
+    "question" : "Tomá sus credenciales"
+  }, {
+    "answer" : "f11e54138bd54a701735ca47d6d412782011dcdeedb4c79be496ea67d6f221e3fa374bfa6b2c3c77a45633e57c0c3dce10260db4c51265e149974b0703b3ec37",
+    "description" : "<a href=\"https://drive.google.com/file/d/1adUFl8AGfP-JRce5soLZoiQRkOguBoOv/view?usp=sharing\">Ver Archivo</a>",
+    "image" : "",
+    "question" : "What?"
+  }, {
+    "answer" : "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+    "description" : "",
+    "image" : "",
+    "question" : "El que calla otorga"
+  }, {
+    "answer" : "b491a023a4eea09488d64d5f4f475b5d42aa847b62ff56069203abc46aa3a97244e210858757dde6e6959af57bb3660761953312ac2f028a8edc09098f764d37",
+    "description" : "El siguiente código escrito en Python imprime dos figuras geométricas. Escribir la respuesta en la forma:</br>Figura1 - Figura2</br>¿No sabés programar? Acá tenés información de las dos sentencias utilizadas: <a href=\"https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion4/condicional_if.html\">IF</a> y <a href=\"https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion4/bucle_for.html\">FOR</a>. Cualquier cosa nos consultás.",
+    "image" : "riddle5.png",
+    "question" : "¿Qué figuras se imprimen?"
+  }, {
+    "answer" : "02f7e5c1b77074ef8506bf1bed8089d72face1bae1472f84a15767aba1ec29600f4088c9a3449875c080b9c82e9eaf18358a4a1b612a60f29489c5c9121a79f9",
+    "description" : "<ul><li>Oriundo del Budapest, Hungría.</li> <li>Es uno de los responsables de sentar las bases de las computadoras de hoy.</li><li>Creó un modelo que aún hoy sigue vigente.</li> </ul>",
+    "image" : "",
+    "question" : "¿Quién es?"
+  }, {
+    "answer" : "67ff0b10000382f9513d4fcc3ba6b7f95abc925bf24b8c87813ee82d7f2ba466b24e7e836b66e13818d70856feab2c1b576c4b33acecd2f190e8ab14b4502a82",
+    "description" : "",
+    "image" : "",
+    "question" : "Somos IEEE Computer Society [20]"
+  }, {
+    "answer" : "cf01d66b3131099c230bcfdc72b461677df83cdb0fcd61c8db3e74b1ae8f5061c6e87dd17bb727635fdd0da2407b12407175959584cecb4a7934f8fb19515719",
+    "description" : "Mmm... tres con catorce. Ojo con la coma, no te la confundas con un punto.",
+    "image" : "",
+    "question" : "3,14"
+  }, {
+    "answer" : "802bfc9f30314b29b7f8ad3302d6ff0f1ecda95c356e014001352e2e2f0e20056cf1b7d206130d60302d90b9f94ecb7fceb1db1f68aa607c30d541df597b9edb",
+    "description" : "",
+    "image" : "riddle3.png",
+    "question" : "Teléfono Guinness, tenemos un récord"
+  }, {
+    "answer" : "69338b6a20941d7af6b3fb0dc412826b83ca052195369b0852fe906f288584eb394e2ddf2a6c873825e6352edf340546cc825a16334b59487ea2294bb397694f",
+    "description" : "",
+    "image" : "",
+    "question" : "51°32'32.7\" 0°00'35.8\""
+  }, {
+    "answer" : "1904e4b3534b7adf4c10ea1354e2c3a2083f7f1ff26abcdbb0255203a12c501c8ae99dd16661fbb21c6c6bda21a23632a814c7c6cb0a94dd2dc83dc58ec5631e",
+    "description" : "¿No sabés programar? Acá tenés información de las dos sentencias utilizadas: <a href=\"https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion4/condicional_if.html\">IF</a> y <a href=\"https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion4/bucle_for.html\">FOR</a>. Cualquier cosa nos consultás.",
+    "image" : "riddle6.png",
+    "question" : "Un poquito de código..."
+  }, {
+    "answer" : "23bd25be756164b4aef946f166e2aa434a7ce176aa9355783f33b7295bfba629faa484c443eabcc902503a2b6accce20ac8eb4391906da07c65740a8ba6526e9",
+    "description" : "Me rehúso a preparar café porque soy una tetera.",
+    "image" : "",
+    "question" : "La tetera"
+  }, {
+    "answer" : "7315ec6bc35373ed957e6466d5f49eefd9974be166aa01b6118edd3d1f264ea5952fd5a74d65021aea600d4ff8c1af5a4bcb287997de8fa991063f2cbe8bd817",
+    "description" : "<ul><li>Oriundo del estado de California, en Estados Unidos.</li> <li>Fanático de Star Trek.</li><li>Fue expulsado de una universidad por hackear su sistema.</li><li>Su rol como ingeniero no recibió el reconocimiento debido.</li></ul>",
+    "image" : "",
+    "question" : "¿Quién es?"
+  }, {
+    "answer" : "19e14b5c13348e6698bd76b8eeb54e77de1a464ee8025565673e7094fca021fa8c7f77756f189e4e4431824f7aa71df461602a611ebf24365e531e14073e195c",
+    "description" : "A4 E5 H6 I9 (separados por un espacio).",
+    "image" : "riddle4.png",
+    "question" : "A ver cómo venís con el Sudoku"
+  }, {
+    "answer" : "e03562d18e8e27fb6ecd2770eb21dfeaf0f45b476e4ae1036581eaf2dc10a102b0af325f6621ed7f011ac5d1da66ab5cbc208dfe4517257ab7588e70bd03bdbf",
+    "description" : "<p>Dale un giro &#x2708;</p>",
+    "image" : "",
+    "question" : "Ojalá funcionara acá"
+  }, {
+    "answer" : "3101a5cde498a23937080ef3735090384d0f48506b665681e78e9e2afdeb495d032935fb2c4b64589ec2fb8599619792baa1d5fe5e264fe945942b10ff71c4b7",
+    "description" : "<b>¡Advertencia!</b> Este video contiene destellos de luz. No recomendado para personas con parálisis o epilepsias. Si creés que pueda afectarte, contactanos a nuestro Instagram @computer.society.itba .</br><a href=\"https://drive.google.com/file/d/1vjVz9f5MzE0_UE9oiYxSOe5ok6qC4RtO/view?usp=sharing\">Ver Archivo</a>",
+    "image" : "",
+    "question" : "¿Me habré olvidado de pagar la boleta?"
+  }, {
+    "answer" : "d4dd5635d000fcfeff48b0eb11e4f0666e396f3612c8c287ae33519b54ceaf4990431a651f0120a42ac79a69630443d82d1e3bd815ceb42b174440f6ad90daed",
+    "description" : "Escribir la respuesta en la forma:</br>Imprime N</br>¿No sabés programar? Acá tenés información de las dos sentencias utilizadas: <a href=\"https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion4/condicional_if.html\">IF</a> y <a href=\"https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion5/funciones.html\">DEF</a>. Cualquier cosa nos consultás.",
+    "image" : "riddle7.png",
+    "question" : "¿Qué imprime este fragmento de código?"
+  }, {
+    "answer" : "c4f13aa8ab062f187ebbf1886aa928c8e28459c5d17edfae7161c0ccda810fcbb3b69cff09a6423856cef99c880af5b423fd9ac55697f7486eb125ebbb75ab0b",
+    "description" : "Hay <b>5 empresas</b> con sede en Silicon Valley, localizadas una al lado de la otra.</br> <ul><li>Las 5 empresas tienen 5 colores distintos en sus logos.</li><li>Cada empresa tiene un país de origen distinto.</li><li>Las 5 empresas trabajan en un solo rubro, tienen una valuación de mercado y manejan una única red social.</li><li>Ninguna empresa trabaja en el mismo rubro, tiene la misma valuación o maneja la misma red social.</li></ul> </br> <b>PISTAS</b></br><ul><li>La empresa australiana tiene un logo rojo.</li><li>La empresa egipcia maneja LinkedIn.</li><li>La empresa alemana trabaja en software.</li> <li>La empresa está en el centro trabaja en computadoras.</li><li>La empresa de logo amarillo tiene una valuación de 10k.</li><li>La empresa con logo verde trabaja en robótica.</li> <li>La empresa que maneja Twitter está al lado de la empresa con una valuación de 10k. </li><li>La empresa con logo verde está a la izquierda de la empresa de logo blanco. </li> <li>La empresa con valuación de 100k está al lado de la empresa que maneja Instagram. </li><li>La empresa china tiene una valuación de 10.000k.</li><li>La empresa con una valuación de 100k está al lado de la empresa que trabaja en celulares. </li><li>La empresa con valuación de 1.000k maneja Facebook.</li><li>La empresa Argentina está al lado de la empresa de logo azul.</li><li>La empresa Argentina es la primera de las 5 en la cuadra.</li> <li>La empresa con una valuación de 100.000k trabaja en streaming.</li></ul> </br>La respuesta debe darse como sigue, teniendo en cuenta los espacios:</br>A - B - C - D - E",
+    "image" : "",
+    "question" : "¿Color de logo? - ¿Origen? - ¿Rubro? - ¿Valuación? - Tik Tok"
+  }, {
+    "answer" : "4892f7446a9f0eeeff34b1451c767048df7759774a5d6bf44089d7b4fb75ce3c0d342e439885bd5cd63fe0079a9eb7b987a259b1e6d682ecc1a30dafc4033f88",
+    "description" : "<ul><li>Oriunda del estado de Virginia Occidental, en Estados Unidos.</li> <li>Fanática de los cálculos.</li><li>Tuvo un rol fundamental en la llegada del hombre a la Luna.</li></ul>",
+    "image" : "",
+    "question" : "¿Quién es?"
+  }, {
+    "answer" : "c226fe84230bfa98a323f327bbc7952d7807f12aab00f4baba4a7061ec11bca1404cad9a4a30fb71fd9363038de2bfff1afc86353a23c0d57863c3927ec0c182",
+    "description" : "&uarr; &uarr; &uarr; &rarr; &uarr; &darr; &uarr; &rarr; &uarr; &rarr; &rarr; &rarr; &uarr; &larr; &uarr; &uarr; &rarr; &rarr; &rarr; &rarr; &larr; &rarr; &uarr; &uarr; &uarr; &uarr; &darr; &uarr; &uarr; &uarr; &rarr; &uarr; &rarr; &larr; &rarr; &larr; &rarr; &rarr; &uarr; &rarr; &rarr; &rarr; &uarr; &rarr; &rarr; &rarr; &darr; &rarr; &larr; &larr; &uarr; &rarr; &uarr; &uarr; &rarr; &darr; &larr; ",
+    "image" : "riddle1.png",
+    "question" : "44.8001° 20.4660°"
+  }, {
+    "answer" : "d40887b698f2b82d21ffb0d4a2cab233de3f8dc11d34742f410d0502d4249844d9a8bc66b0b533e4c7083df54f3bb49e206e9d649f0e1d593b2e0212f4efdd07",
+    "description" : "Escribir la respuesta en la forma:</br>Línea N</br>¿No sabés programar? Acá tenés información de las dos sentencias utilizadas: <a href=\"https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion4/condicional_if.html\">IF</a> y <a href=\"https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion5/funciones.html\">DEF</a>; y de las <a href=\"https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion5/funciones_integradas.html\">FUNCIONES INTEGRADAS</a> de Python. Cualquier cosa nos consultás.",
+    "image" : "riddle8.png",
+    "question" : "Hay un error en el código. ¿En qué línea está?"
+  }, {
+    "answer" : "844d8779103b94c18f4aa4cc0c3b4474058580a991fba85d3ca698a0bc9e52c5940feb7a65a3a290e17e6b23ee943ecc4f73e7490327245b4fe5d5efb590feb2",
+    "description" : "<a href=\"https://drive.google.com/file/d/1aTdjUMk9NR43clxo-tI7NPE8ENvKo4tU/view?usp=sharing\">Ver Archivo</a>",
+    "image" : "",
+    "question" : "riddle.txt"
+  }, {
+    "answer" : "8d364dbde2bf08c0f7ee69595e28f504bc02f6736879ddbe32ff8c7902127d3773fec7c73364ceb34761769790980306c518fd02aa65378835a8f130591a877e",
+    "description" : "Decir a cuántos click está <a href=\"https://en.wikipedia.org/wiki/Linus_Torvalds\">Linus Torvalds</a> desde <a href=\"https://en.wikipedia.org/wiki/IEEE_Computer_Society\">IEEE Computer Society</a> solamente haciendo clicks en el sitio. Responder de la forma:</br>N clicks",
+    "image" : "",
+    "question" : "¿A cuántos clicks estamos?"
+  }, {
+    "answer" : "b4ac71468535d711c9b4f0ad83a1ce286583231d0c1f82f57df7676f2a3e558922669c01cc0918cc4dfefb2d199ddf05b0351222cec545c99aa6960971b6b102",
+    "description" : "Alfa Charlie Oscar Romeo Delta Alfa Tango Echo  Delta Echo  Echo Sierra Tango Oscar  Quebec Uniform Echo  Tango Echo  Victor Alfa  Alfa  Sierra Echo Romeo Victor India Romeo",
+    "image" : "",
+    "question" : "Te llegó un SMS"
+  }, {
+    "answer" : "07ff16ff98c3eb09a6c33dbfe1f985b1ba62540d785dd71717a4df2635e062180b0dc25417aec8f99f577535520ab686497805445293a47c6658fc03abafc04c",
+    "description" : "",
+    "image" : "",
+    "question" : "Falla de nuevo, falla mejor"
+  }, {
+    "answer" : "0be0f233e4613a3ed6f460ac374f65836013aa608eef21b42a32525f8e56690b6f2cf6c87937131be36d06f97e8cc3e51072a3877ba4b874111dd38f097db47a",
+    "description" : "¿De qué? <div style=\"-moz-transform:scaleX(-1); -o-transform:scaleX(-1); -webkit-transform:scaleX(-1); transform:scaleX(-1); filter:FlipH; display: inline-block;\">Y escrito así .</div>",
+    "image" : "",
+    "question" : "¿Te acordás?"
+  }, {
+    "answer" : "b6b3222d528519c4d84ab229232e2de497dba94252aaac80a22b1ffaba4a3b7a0f3cdd7a4f5e68cb82e0de44d6025fa404d365b338ab0863280b171a464e0590",
+    "description" : "¿Te acordás quién nos dio una mano?",
+    "image" : "",
+    "question" : "Qué buen evento metimos En El Castillo"
+  } ],
+  "reverse" : {
+    "\"init\"" : {
+      "answer" : "b4ac71468535d711c9b4f0ad83a1ce286583231d0c1f82f57df7676f2a3e558922669c01cc0918cc4dfefb2d199ddf05b0351222cec545c99aa6960971b6b102",
+      "description" : "Alfa Charlie Oscar Romeo Delta Alfa Tango Echo  Delta Echo  Echo Sierra Tango Oscar  Quebec Uniform Echo  Tango Echo  Victor Alfa  Alfa  Sierra Echo Romeo Victor India Romeo",
+      "image" : "",
+      "number" : 1,
+      "question" : "Te llegó un SMS"
+    },
+    "\"acordate de esto que te va a servir\"" : {
+      "answer" : "3101a5cde498a23937080ef3735090384d0f48506b665681e78e9e2afdeb495d032935fb2c4b64589ec2fb8599619792baa1d5fe5e264fe945942b10ff71c4b7",
+      "description" : "<b>¡Advertencia!</b> Este video contiene destellos de luz. No recomendado para personas con parálisis o epilepsias. Si creés que pueda afectarte, contactanos a nuestro Instagram @computer.society.itba .</br><a href=\"https://drive.google.com/file/d/1vjVz9f5MzE0_UE9oiYxSOe5ok6qC4RtO/view?usp=sharing\">Ver Archivo</a>",
+      "image" : "",
+      "number" : 2,
+      "question" : "¿Me habré olvidado de pagar la boleta?"
+    },
+    "\"que ves?\"" : {
+      "answer" : "d4dd5635d000fcfeff48b0eb11e4f0666e396f3612c8c287ae33519b54ceaf4990431a651f0120a42ac79a69630443d82d1e3bd815ceb42b174440f6ad90daed",
+      "description" : "Escribir la respuesta en la forma:</br>Imprime N</br>¿No sabés programar? Acá tenés información de las dos sentencias utilizadas: <a href=\"https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion4/condicional_if.html\">IF</a> y <a href=\"https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion5/funciones.html\">DEF</a>. Cualquier cosa nos consultás.",
+      "image" : "riddle7.png",
+      "number" : 3,
+      "question" : "¿Qué imprime este fragmento de código?"
+    },
+    "\"imprime 13\"" : {
+      "answer" : "cf01d66b3131099c230bcfdc72b461677df83cdb0fcd61c8db3e74b1ae8f5061c6e87dd17bb727635fdd0da2407b12407175959584cecb4a7934f8fb19515719",
+      "description" : "Mmm... tres con catorce. Ojo con la coma, no te la confundas con un punto.",
+      "image" : "",
+      "number" : 4,
+      "question" : "3,14"
+    },
+    "\"3,14159265358979\"" : {
+      "answer" : "7315ec6bc35373ed957e6466d5f49eefd9974be166aa01b6118edd3d1f264ea5952fd5a74d65021aea600d4ff8c1af5a4bcb287997de8fa991063f2cbe8bd817",
+      "description" : "<ul><li>Oriundo del estado de California, en Estados Unidos.</li> <li>Fanático de Star Trek.</li><li>Fue expulsado de una universidad por hackear su sistema.</li><li>Su rol como ingeniero no recibió el reconocimiento debido.</li></ul>",
+      "image" : "",
+      "number" : 5,
+      "question" : "¿Quién es?"
+    },
+    "\"steve wozniak\"" : {
+      "answer" : "07ff16ff98c3eb09a6c33dbfe1f985b1ba62540d785dd71717a4df2635e062180b0dc25417aec8f99f577535520ab686497805445293a47c6658fc03abafc04c",
+      "description" : "",
+      "image" : "",
+      "number" : 6,
+      "question" : "Falla de nuevo, falla mejor"
+    },
+    "\"respuesta correcta not found,\"" : {
+      "answer" : "19e14b5c13348e6698bd76b8eeb54e77de1a464ee8025565673e7094fca021fa8c7f77756f189e4e4431824f7aa71df461602a611ebf24365e531e14073e195c",
+      "description" : "A4 E5 H6 I9 (separados por un espacio).",
+      "image" : "riddle4.png",
+      "number" : 7,
+      "question" : "A ver cómo venís con el Sudoku"
+    },
+    "\"9 8 7 7\"" : {
+      "answer" : "e03562d18e8e27fb6ecd2770eb21dfeaf0f45b476e4ae1036581eaf2dc10a102b0af325f6621ed7f011ac5d1da66ab5cbc208dfe4517257ab7588e70bd03bdbf",
+      "description" : "<p>Dale un giro &#x2708;</p>",
+      "image" : "",
+      "number" : 8,
+      "question" : "Ojalá funcionara acá"
+    },
+    "\"do a barrel roll\"" : {
+      "answer" : "c226fe84230bfa98a323f327bbc7952d7807f12aab00f4baba4a7061ec11bca1404cad9a4a30fb71fd9363038de2bfff1afc86353a23c0d57863c3927ec0c182",
+      "description" : "&uarr; &uarr; &uarr; &rarr; &uarr; &darr; &uarr; &rarr; &uarr; &rarr; &rarr; &rarr; &uarr; &larr; &uarr; &uarr; &rarr; &rarr; &rarr; &rarr; &larr; &rarr; &uarr; &uarr; &uarr; &uarr; &darr; &uarr; &uarr; &uarr; &rarr; &uarr; &rarr; &larr; &rarr; &larr; &rarr; &rarr; &uarr; &rarr; &rarr; &rarr; &uarr; &rarr; &rarr; &rarr; &darr; &rarr; &larr; &larr; &uarr; &rarr; &uarr; &uarr; &rarr; &darr; &larr; ",
+      "image" : "riddle1.png",
+      "number" : 9,
+      "question" : "44.8001° 20.4660°"
+    },
+    "\"nikola tesla\"" : {
+      "answer" : "d40887b698f2b82d21ffb0d4a2cab233de3f8dc11d34742f410d0502d4249844d9a8bc66b0b533e4c7083df54f3bb49e206e9d649f0e1d593b2e0212f4efdd07",
+      "description" : "Escribir la respuesta en la forma:</br>Línea N</br>¿No sabés programar? Acá tenés información de las dos sentencias utilizadas: <a href=\"https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion4/condicional_if.html\">IF</a> y <a href=\"https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion5/funciones.html\">DEF</a>; y de las <a href=\"https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion5/funciones_integradas.html\">FUNCIONES INTEGRADAS</a> de Python. Cualquier cosa nos consultás.",
+      "image" : "riddle8.png",
+      "number" : 10,
+      "question" : "Hay un error en el código. ¿En qué línea está?"
+    },
+    "\"linea 2\"" : {
+      "answer" : "0be0f233e4613a3ed6f460ac374f65836013aa608eef21b42a32525f8e56690b6f2cf6c87937131be36d06f97e8cc3e51072a3877ba4b874111dd38f097db47a",
+      "description" : "¿De qué? <div style=\"-moz-transform:scaleX(-1); -o-transform:scaleX(-1); -webkit-transform:scaleX(-1); transform:scaleX(-1); filter:FlipH; display: inline-block;\">Y escrito así .</div>",
+      "image" : "",
+      "number" : 11,
+      "question" : "¿Te acordás?"
+    },
+    "\"rivres a av et euq otse\"" : {
+      "answer" : "c4f13aa8ab062f187ebbf1886aa928c8e28459c5d17edfae7161c0ccda810fcbb3b69cff09a6423856cef99c880af5b423fd9ac55697f7486eb125ebbb75ab0b",
+      "description" : "Hay <b>5 empresas</b> con sede en Silicon Valley, localizadas una al lado de la otra.</br> <ul><li>Las 5 empresas tienen 5 colores distintos en sus logos.</li><li>Cada empresa tiene un país de origen distinto.</li><li>Las 5 empresas trabajan en un solo rubro, tienen una valuación de mercado y manejan una única red social.</li><li>Ninguna empresa trabaja en el mismo rubro, tiene la misma valuación o maneja la misma red social.</li></ul> </br> <b>PISTAS</b></br><ul><li>La empresa australiana tiene un logo rojo.</li><li>La empresa egipcia maneja LinkedIn.</li><li>La empresa alemana trabaja en software.</li> <li>La empresa está en el centro trabaja en computadoras.</li><li>La empresa de logo amarillo tiene una valuación de 10k.</li><li>La empresa con logo verde trabaja en robótica.</li> <li>La empresa que maneja Twitter está al lado de la empresa con una valuación de 10k. </li><li>La empresa con logo verde está a la izquierda de la empresa de logo blanco. </li> <li>La empresa con valuación de 100k está al lado de la empresa que maneja Instagram. </li><li>La empresa china tiene una valuación de 10.000k.</li><li>La empresa con una valuación de 100k está al lado de la empresa que trabaja en celulares. </li><li>La empresa con valuación de 1.000k maneja Facebook.</li><li>La empresa Argentina está al lado de la empresa de logo azul.</li><li>La empresa Argentina es la primera de las 5 en la cuadra.</li> <li>La empresa con una valuación de 100.000k trabaja en streaming.</li></ul> </br>La respuesta debe darse como sigue, teniendo en cuenta los espacios:</br>A - B - C - D - E",
+      "image" : "",
+      "number" : 12,
+      "question" : "¿Color de logo? - ¿Origen? - ¿Rubro? - ¿Valuación? - Tik Tok"
+    },
+    "\"verde - china - robotica - 10,000k - tik tok\"" : {
+      "answer" : "844d8779103b94c18f4aa4cc0c3b4474058580a991fba85d3ca698a0bc9e52c5940feb7a65a3a290e17e6b23ee943ecc4f73e7490327245b4fe5d5efb590feb2",
+      "description" : "<a href=\"https://drive.google.com/file/d/1aTdjUMk9NR43clxo-tI7NPE8ENvKo4tU/view?usp=sharing\">Ver Archivo</a>",
+      "image" : "",
+      "number" : 13,
+      "question" : "riddle.txt"
+    },
+    "\"apple\"" : {
+      "answer" : "8d364dbde2bf08c0f7ee69595e28f504bc02f6736879ddbe32ff8c7902127d3773fec7c73364ceb34761769790980306c518fd02aa65378835a8f130591a877e",
+      "description" : "Decir a cuántos click está <a href=\"https://en.wikipedia.org/wiki/Linus_Torvalds\">Linus Torvalds</a> desde <a href=\"https://en.wikipedia.org/wiki/IEEE_Computer_Society\">IEEE Computer Society</a> solamente haciendo clicks en el sitio. Responder de la forma:</br>N clicks",
+      "image" : "",
+      "number" : 14,
+      "question" : "¿A cuántos clicks estamos?"
+    },
+    "\"2 clicks\"" : {
+      "answer" : "b6b3222d528519c4d84ab229232e2de497dba94252aaac80a22b1ffaba4a3b7a0f3cdd7a4f5e68cb82e0de44d6025fa404d365b338ab0863280b171a464e0590",
+      "description" : "¿Te acordás quién nos dio una mano?",
+      "image" : "",
+      "number" : 15,
+      "question" : "Qué buen evento metimos En El Castillo"
+    }
+  },
+  "winning" : {
+    "algorithm" : "SHA1",
+    "code" : "Otro mensaje secreto. Qué grande CS.",
+    "number" : 0
+  }
+}
