@@ -1,11 +1,8 @@
   // Set the configuration for your app
   // TODO: Replace with your project's config object
-  var config = {
-    apiKey: "AIzaSyBGSCLGL6Gq3JQU6q9i4kFAwQZ-pbp2Djg",
-    authDomain: "cs-scavenger-hunt.firebaseapp.com",
-    databaseURL: "https://cs-scavenger-hunt.firebaseio.com",
-    storageBucket: "cs-scavenger-hunt.appspot.com"
-  };
+  
+  import { config } from "../secrets";
+
   firebase.initializeApp(config);
 
   // Initialize Cloud Functions through Firebase
