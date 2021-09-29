@@ -1,7 +1,15 @@
   // Set the configuration for your app
   // TODO: Replace with your project's config object
   
-  import { config } from "../secrets";
+  const config = {
+    apiKey: "AIzaSyDPvzhnZRLA7wwYDKqautQRD2o2LhOJjdI",
+    authDomain: "ieee-day.firebaseapp.com",
+    databaseURL: "https://ieee-day-default-rtdb.firebaseio.com",
+    projectId: "ieee-day",
+    storageBucket: "ieee-day.appspot.com",
+    messagingSenderId: "71378570482",
+    appId: "1:71378570482:web:b6f5eb613829124ae6146b"
+  }
 
   firebase.initializeApp(config);
 
