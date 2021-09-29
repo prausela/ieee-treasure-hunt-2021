@@ -8,7 +8,7 @@
     projectId: "ieee-day",
     storageBucket: "ieee-day.appspot.com",
     messagingSenderId: "71378570482",
-    appId: "1:71378570482:web:b6f5eb613829124ae6146b"
+    appId: "1:71378570482:web:14a3461e7ad37b75e6146b"
   }
 
   firebase.initializeApp(config);
