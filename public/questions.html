@@ -8,19 +8,24 @@
     <link href="./main.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="./img/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Quiz | CS Scav Hunt</title>
+    <title>? | IEEE Day</title>
 
     <!-- update the version number as needed -->
-    <script src="/__/firebase/7.13.2/firebase-app.js"></script>
+    <!-- <script src="/__/firebase/7.13.2/firebase-app.js"></script> -->
     <!-- include only the Firebase features as you need -->
 
-    <script src="/__/firebase/7.13.2/firebase-database.js"></script>
+    <!-- <script src="/__/firebase/7.13.2/firebase-database.js"></script> -->
     <!-- <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script> -->
 
     <!-- initialize the SDK after all desired features are loaded -->
     <!-- <script defer src="/__/firebase/init.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-auth-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
     <script defer src="https://cdn.rawgit.com/h2non/jsHashes/master/hashes.js"></script>
-
+    <script src="./api.js"></script>
   </head>
   <body class="content-page">
     <div v-cloak id="app">
@@ -39,6 +44,7 @@
                 </div>
               </div>
               <p class="custom-error">{{ errorText }}</p>
+              <player></player>
             </div>
             <div v-else>
               <conclu></conclu>
@@ -47,15 +53,11 @@
         </div>
       </v-app>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-    <script defer src="https://cdn.rawgit.com/h2non/jsHashes/master/hashes.js"></script>
     <script type="text/javascript" src="./qrcode.js"></script>
-    <script src="./api.js"></script>
     <script src="./question.js"></script>
     <script src="./logo.js"></script>
     <script src="./bot.js"></script>
+    <script src="./player.js"></script>
     <script src="./conclu.js"></script>
   </body>
 </html>

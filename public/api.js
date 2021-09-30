@@ -2,21 +2,25 @@
   // TODO: Replace with your project's config object
   
   const config = {
-    apiKey: "AIzaSyDPvzhnZRLA7wwYDKqautQRD2o2LhOJjdI",
-    authDomain: "ieee-day.firebaseapp.com",
-    databaseURL: "https://ieee-day-default-rtdb.firebaseio.com",
-    projectId: "ieee-day",
-    storageBucket: "ieee-day.appspot.com",
-    messagingSenderId: "71378570482",
-    appId: "1:71378570482:web:14a3461e7ad37b75e6146b"
+    apiKey: "AIzaSyDo-R7sCXtE2YUpF7DdZ-lfCrZ8H8N6ys4",
+    authDomain: "ieee-day-e4a88.firebaseapp.com",
+    databaseURL: "https://ieee-day-e4a88-default-rtdb.firebaseio.com",
+    projectId: "ieee-day-e4a88",
+    storageBucket: "ieee-day-e4a88.appspot.com",
+    messagingSenderId: "389179952213",
+    appId: "1:389179952213:web:32ccc991583c8c442a58dc",
+    measurementId: "G-25QK9QHC2W"
   }
 
   firebase.initializeApp(config);
+  
 
   // Initialize Cloud Functions through Firebase
   // var functions = firebase.functions();
   // Get a reference to the database service
-  var database = firebase.database();
+  var database            = firebase.database();
+  var auth                = firebase.auth();
+  var googleAuthProvider  = new firebase.auth.GoogleAuthProvider();
 
   var api = class {
       static get timeout() {

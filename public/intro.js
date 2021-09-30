@@ -6,7 +6,10 @@ Vue.component('intro', {
     },
     template:
         `<v-container>
-            <logo></logo>            
+            <logo></logo>
+            <div style="height: 2em;"/>
+            <signup v-if="!auth.currentUser" style="display:flex; justify-content: center;"></signup>  
+            {{checkIfLoggedIn}}    
         </v-container>`,
     computed: {
         /* Dimensions of the components */
@@ -20,9 +23,17 @@ Vue.component('intro', {
             if (this.prevAnswer)
                 return "./questions.html?" + this.prevAnswer;
             return "./questions.html";
+        },
+        checkIfLoggedIn() {
+            auth.onAuthStateChanged((user) => {
+                if(user){
+                    window.location.href = '/questions.html';
+                }
+            })
         }
     },
-    mounted () {
+    mounted() {
         this.prevAnswer = '';
     }
+
   })
