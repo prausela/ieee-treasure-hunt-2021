@@ -35,15 +35,30 @@
             <div v-if="winner == false">
               <logo></logo>
               <question :title="question" :description="description" :image="image"></question>
-              <div class="d-flex flex-row mb-n6">
-                <div class="flex-grow-1">
-                  <v-text-field v-model="input" label="Tu respuesta" clearable solo @keyup.enter="sendAnswer()" :disabled="disabled"></v-text-field>
+              <div v-if="image_upload && answered">
+                <div class="title font-weight-regular text-left" v-if="auth.currentUser" style="margin-top: 2em">
+                  Lleg&oacute; la hora...<br />¡sub&iacute; una foto afuera con la respuesta que acab&aacute;s de acertar en <a href="https://imgbb.com/" target="_blank" style="color: white;">ImgBB</a> y copi&aacute; el link ac&aacute; abajo!
                 </div>
-                <div class="flex-grow-0 ml-2">
-                  <v-icon size="48" color="white" @click="sendAnswer()" :disabled="disabled">mdi-send</v-btn>
+                <div class="d-flex flex-row mb-n6">
+                  <div class="flex-grow-1">
+                    <v-text-field v-model="input" label="URL de la imagen" clearable solo @keyup.enter="sendAnswer()" :disabled="disabled"></v-text-field>
+                  </div>
+                  <div class="flex-grow-0 ml-2">
+                    <v-icon size="48" color="white" @click="sendAnswer()" :disabled="disabled">mdi-send</v-btn>
+                  </div>
                 </div>
               </div>
-              <p class="custom-error">{{ errorText }}</p>
+              <div v-else>
+                <div class="d-flex flex-row mb-n6">
+                  <div class="flex-grow-1">
+                    <v-text-field v-model="input" label="Tu respuesta" clearable solo @keyup.enter="sendAnswer()" :disabled="disabled"></v-text-field>
+                  </div>
+                  <div class="flex-grow-0 ml-2">
+                    <v-icon size="48" color="white" @click="sendAnswer()" :disabled="disabled">mdi-send</v-btn>
+                  </div>
+                </div>
+                <p class="custom-error">{{ errorText }}</p>
+              </div>
               <player></player>
             </div>
             <div v-else>

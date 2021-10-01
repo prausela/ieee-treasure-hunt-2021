@@ -8,6 +8,8 @@ new Vue({
         question: '',
         description: '',
         image: '',
+        image_upload: true,
+        answered: false,
         answer: '',
         errorText: '',
         prevAnswer: '',
@@ -28,14 +30,18 @@ new Vue({
         sendAnswer() {
             this.input = this.normalizeInput(this.input);
             if (this.checkAnswer(this.input, this.answer)) {
-                this.errorText = '';
-                this.prevAnswer = this.input;
-                this.number++;
-                if (this.number <= 15) {
-                    this.printLoading();
-                    this.getNextQuestion();
+                if(this.image_upload && !this.answered){
+                    this.answered = true;
                 } else {
-                    this.goToWinScreen();
+                    this.errorText = '';
+                    this.prevAnswer = this.input;
+                    this.number++;
+                    if (this.number <= 15) {
+                        this.printLoading();
+                        this.getNextQuestion();
+                    } else {
+                        this.goToWinScreen();
+                    }
                 }
             } else {
                 this.errorText = this.errorMessages[this.getRandomInt(0, 7)];
@@ -64,6 +70,7 @@ new Vue({
             this.question = this.number + '. ' + block.question;
             this.description = block.description;
             this.image = block.image;
+            this.image_upload = block.image_upload;
             this.answer = block.answer;
             this.disabled = false;
         },
@@ -72,6 +79,7 @@ new Vue({
             this.description = '';
             this.image = 'loading.png';
             this.answer = '';
+            this.image_upload = true;
             this.disabled = true;
         },
         // Retorna un número aleatorio entre min (incluido) y max (excluido)
@@ -116,6 +124,7 @@ new Vue({
                     // console.error(error);
                 });
             if (rta) {
+                console.log(rta)
                 this.printNextBlock(rta);
             } else {
                 this.prevAnswer = 'init';
