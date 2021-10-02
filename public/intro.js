@@ -29,6 +29,8 @@ Vue.component('intro', {
                 if(user){
                     getCurrentQuestion(user).then((ans)=>{
                         window.location.href = '/questions.html?' + ans;
+                    }).catch(err => {
+                        window.location.href = '/questions.html';
                     })
                     
                 }

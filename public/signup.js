@@ -17,6 +17,8 @@ Vue.component('signup', {
                     let user = result.user;
                     getCurrentQuestion(user).then((curr) =>{
                         window.location = '/questions.html?'+ curr;
+                    }).catch((err)=>{
+                        window.location = "/questions.html";
                     })
                    
                 })

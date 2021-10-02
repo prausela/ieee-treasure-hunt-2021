@@ -41,7 +41,6 @@ new Vue({
                         this.errorText = '';
                         this.answered = true;
                         this.prevAnswer = this.input;
-                        console.log(this.images)
                         if(this.images){
                             auth.onAuthStateChanged((user) =>{
                                 this.images.forEach((image) => {
@@ -72,8 +71,6 @@ new Vue({
         },
         sendImages() {
             let correctAnswer = true;
-            console.log("banana")
-            console.log(this.last_question)
             if(this.last_question){
                 this.image_questions.forEach((image_question)=>{
                     if(!this.image_url[image_question.image_upload_ref])
@@ -197,7 +194,6 @@ new Vue({
                     // console.error(error);
                 });
             if (rta) {
-                console.log(rta)
                 this.printNextBlock(rta);
             } else {
                 this.prevAnswer = 'init';
@@ -240,7 +236,9 @@ new Vue({
         this.winner = false;
         auth.onAuthStateChanged((user) =>{
             getCurrentQuestion(user).then((ans)=>{
-                this.prevAnswer = ans ? ans : 'init';
+                this.prevAnswer = ans;
+                this.getNextQuestion(user, undefined);
+            }).catch(err => {
                 this.getNextQuestion(user, undefined);
             })
         })
