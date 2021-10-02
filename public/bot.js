@@ -8,8 +8,14 @@ new Vue({
         question: '',
         description: '',
         image: '',
-        image_upload: true,
+        image_upload: false,
+        image_ref: undefined,
+        last_question: false,
+        image_url: {},
+        images: [],
+        image_questions: [],
         answered: false,
+        can_upload_later: false,
         answer: '',
         errorText: '',
         prevAnswer: '',
@@ -29,24 +35,76 @@ new Vue({
     methods: {
         sendAnswer() {
             this.input = this.normalizeInput(this.input);
-            if (this.checkAnswer(this.input, this.answer)) {
-                if(this.image_upload && !this.answered){
-                    this.answered = true;
-                } else {
-                    this.errorText = '';
-                    this.prevAnswer = this.input;
-                    this.number++;
-                    if (this.number <= 15) {
-                        this.printLoading();
-                        this.getNextQuestion();
+            if(this.image_upload){
+                if(!this.answered){
+                    if(this.checkAnswer(this.input, this.answer)){
+                        this.errorText = '';
+                        this.answered = true;
+                        this.prevAnswer = this.input;
+                        console.log(this.images)
+                        if(this.images){
+                            auth.onAuthStateChanged((user) =>{
+                                this.images.forEach((image) => {
+                                    this.getImageQuestion(user, image);
+                                })
+                            })
+                        }
                     } else {
-                        this.goToWinScreen();
+                        this.errorText = this.errorMessages[this.getRandomInt(0, 7)];
                     }
+                }
+            } else if (this.checkAnswer(this.input, this.answer)) {
+                this.errorText = '';
+                this.prevAnswer = this.input;
+                this.number++;
+                if (this.number <= 16) {
+                    this.printLoading();
+                    auth.onAuthStateChanged((user) =>{
+                        this.getNextQuestion(user, undefined);
+                    })
+                } else {
+                    this.goToWinScreen();
                 }
             } else {
                 this.errorText = this.errorMessages[this.getRandomInt(0, 7)];
             }
             this.input = '';
+        },
+        sendImages() {
+            let correctAnswer = true;
+            console.log("banana")
+            console.log(this.last_question)
+            if(this.last_question){
+                this.image_questions.forEach((image_question)=>{
+                    if(!this.image_url[image_question.image_upload_ref])
+                        correctAnswer = false
+                })
+            }
+            if(!this.last_question || (this.last_question && correctAnswer) ){
+                this.errorText = '';
+                this.number++;
+                
+                if (this.number <= 16) {
+                    this.printLoading();
+                    auth.onAuthStateChanged((user) =>{
+                        this.getNextQuestion(user, this.image_url);
+                    })
+                } else {
+                    this.goToWinScreen();
+                }
+            }
+        },
+        sendImagesLater() {
+            this.errorText = '';
+            this.number++;
+            if (this.number <= 16) {
+                this.printLoading();
+                auth.onAuthStateChanged((user) =>{
+                    this.getNextQuestion(user, undefined);
+                })
+            } else {
+                this.goToWinScreen();
+            }
         },
         normalizeInput(input) {
             // No distingue tildes
@@ -68,18 +126,23 @@ new Vue({
         printNextBlock(block) {
             this.number = block.number;
             this.question = this.number + '. ' + block.question;
+            this.last_question = block.last_question;
+            this.can_upload_later = block.can_upload_later
             this.description = block.description;
             this.image = block.image;
             this.image_upload = block.image_upload;
+            this.image_ref = block.image_upload_ref;
+            this.images = block.images;
             this.answer = block.answer;
             this.disabled = false;
         },
         printLoading() {
             this.question = this.number + '. ' + 'Loading...';
             this.description = '';
+            this.can_upload_later = false;
             this.image = 'loading.png';
             this.answer = '';
-            this.image_upload = true;
+            this.image_upload = false;
             this.disabled = true;
         },
         // Retorna un número aleatorio entre min (incluido) y max (excluido)
@@ -118,8 +181,18 @@ new Vue({
 			return code + number + "\n" + this.getHashedParam(code + number.toString(), this.algorithm);
         },
 
-        async getNextQuestion() {
-            let rta = await getNext(this.prevAnswer)
+        async getImageQuestion(user, question_hash){
+            const rta = await getQuestion(question_hash);
+            const isInDB = await checkIfImageIsInDB(user, question_hash);
+
+            if(!isInDB){
+                this.image_questions.push(rta);
+            }
+            
+        },
+
+        async getNextQuestion(user, image_url) {
+            let rta = await getNext(this.prevAnswer, image_url, user)
                 .catch((error) => {
                     // console.error(error);
                 });
@@ -128,7 +201,9 @@ new Vue({
                 this.printNextBlock(rta);
             } else {
                 this.prevAnswer = 'init';
-                this.getNextQuestion();
+                auth.onAuthStateChanged((user) =>{
+                    this.getNextQuestion(user, image_url);
+                })
             }
         },
 		async goToWinScreen() {
@@ -163,6 +238,11 @@ new Vue({
         this.number = '-';
         this.printLoading();
         this.winner = false;
-        this.getNextQuestion();
+        auth.onAuthStateChanged((user) =>{
+            getCurrentQuestion(user).then((ans)=>{
+                this.prevAnswer = ans ? ans : 'init';
+                this.getNextQuestion(user, undefined);
+            })
+        })
     }
 })

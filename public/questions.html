@@ -34,21 +34,26 @@
           <v-container style="max-width: 960px;">
             <div v-if="winner == false">
               <logo></logo>
-              <question :title="question" :description="description" :image="image"></question>
+              
               <div v-if="image_upload && answered">
                 <div class="title font-weight-regular text-left" v-if="auth.currentUser" style="margin-top: 2em">
-                  Lleg&oacute; la hora...<br />¡sub&iacute; una foto afuera con la respuesta que acab&aacute;s de acertar en <a href="https://imgbb.com/" target="_blank" style="color: white;">ImgBB</a> y copi&aacute; el link ac&aacute; abajo!
+                  Lleg&oacute; la hora...<br />¡sub&iacute; una foto afuera con la respuesta que acab&aacute;s de acertar en <a href="https://imgbb.com/" target="_blank" style="color: white;">ImgBB</a> y copi&aacute; el link ac&aacute; abajo!<br />Si alguna no la quer&eacute;s subir en esta instancia podes dejarla en blanco, siempre que no sea la &uacute;ltima pregunta.
                 </div>
-                <div class="d-flex flex-row mb-n6">
-                  <div class="flex-grow-1">
-                    <v-text-field v-model="input" label="URL de la imagen" clearable solo @keyup.enter="sendAnswer()" :disabled="disabled"></v-text-field>
+                <div v-for="image_question in image_questions" :key="image_question.number">
+                  <question :title="image_question.question" :description="image_question.description" :image="image_question.image"></question>
+                  <div class="d-flex flex-row mb-n6">
+                    <div class="flex-grow-1">
+                      <v-text-field v-model="image_url[image_question.image_upload_ref]" label="URL de la imagen" clearable solo :disabled="disabled" style="margin-bottom: 2em;"></v-text-field>
+                    </div>
                   </div>
-                  <div class="flex-grow-0 ml-2">
-                    <v-icon size="48" color="white" @click="sendAnswer()" :disabled="disabled">mdi-send</v-btn>
-                  </div>
+                </div>
+                <div class="flex-grow-0 ml-2">
+                  <v-btn color="#146DA2" @click="sendImages()" dark rounded class="custom-button" large>Enviar imagenes</v-btn> 
+                  <v-btn v-if="can_upload_later" color="#808080" @click="sendImagesLater()" dark rounded class="custom-button" large>Enviar despu&eacute;s</v-btn>  
                 </div>
               </div>
               <div v-else>
+                <question :title="question" :description="description" :image="image"></question>
                 <div class="d-flex flex-row mb-n6">
                   <div class="flex-grow-1">
                     <v-text-field v-model="input" label="Tu respuesta" clearable solo @keyup.enter="sendAnswer()" :disabled="disabled"></v-text-field>

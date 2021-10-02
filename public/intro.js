@@ -27,7 +27,10 @@ Vue.component('intro', {
         checkIfLoggedIn() {
             auth.onAuthStateChanged((user) => {
                 if(user){
-                    window.location.href = '/questions.html';
+                    getCurrentQuestion(user).then((ans)=>{
+                        window.location.href = '/questions.html?' + ans;
+                    })
+                    
                 }
             })
         }

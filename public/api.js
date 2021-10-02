@@ -80,7 +80,48 @@
     return api.set('/winning/number', number + 1);
   }
 
-  function getNext(prevAnswer) {
+  function getNext(prevAnswer, image_url, user) {
     prevAnswer = prevAnswer.replace('.', ',');
-    return api.fetch('/reverse/\"' + prevAnswer + '\"')
+    let ans = api.fetch('/reverse/\"' + prevAnswer + '\"');
+    if(image_url)
+      uploadImage(image_url, user)
+    autoSave(prevAnswer, user);
+    return ans;
+  }
+
+  function autoSave(key, user){
+    const users = database.ref('/users/' + user.uid);
+    users.update({
+      "0" : key 
+    });
+  }
+
+  function uploadImage(image_url, user){
+    const users = database.ref('/users/' + user.uid);
+    console.log(image_url)
+    users.update(image_url)
+  }
+
+  async function checkIfImageIsInDB(user, question_hash){
+    const question = await api.fetch('/questions/' + question_hash);
+    console.log(user)
+    const user_info = await api.fetch('/users/' + user.uid);
+    console.log("pan")
+    console.log(question)
+    console.log(question.image_upload_ref)
+    console.log(user_info)
+    if(user_info[question.image_upload_ref]){
+      return true;
+    }
+    return false;
+  }
+
+  function getQuestion(question_hash) {
+    return api.fetch('/questions/' + question_hash);
+  }
+
+  async function getCurrentQuestion(user){
+    const curr_user = await api.fetch('/users/' + user.uid);
+    console.log(curr_user);
+    return curr_user[0];
   }
