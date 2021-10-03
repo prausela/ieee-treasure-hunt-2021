@@ -15,27 +15,14 @@ Vue.component('conclu', {
             <v-row class="align-center">
                 <v-col>
                     <div class="headline text-center">
-                        ¡Has ganado!</br>Tu código ganador es
+                        ¡Has ganado!</br>
                     </div>
                 </v-col>
             </v-row>
-            <div class="d-flex flex-row justify-center">
-                <div class="pt-3 mx-5" v-show="showIfNotMobile">
-                    <v-img class="hide-gif-mobile" :max-height="getIconHeight" :max-width="getIconWidth" src="./img/winner.gif" alt="image" contain position="center"></v-img>    
-                </div>
-                <div id="qr-code-winner">
-                    <v-img :max-height="getIconHeight" :max-width="getIconWidth" src="./img/loading.png" alt="image" contain position="center"></v-img>    
-                </div>
-                <div class="pt-3 mx-5" v-show="showIfNotMobile">
-                    <v-img :max-height="getIconHeight" :max-width="getIconWidth" src="./img/winner.gif" alt="image" contain position="center"></v-img>    
-                </div>
-            </div>
             <v-row class="align-center">
                 <v-col>
                     <div class="title font-weight-regular font-italic text-center">
-                        ¿Querés ganarte una pista para el Qué ves? y participar para ganar una GiftCard? </br>
-                        Subí una historia (arrobándonos a @computer.society.itba) con una captura de esta pantalla 
-                        y envianos el texto que esconde el Código QR al privado junto con la última respuesta.
+                        No obstante, antes verificaremos que las imagenes subidas correspondan con las respuestas indicadas.<br /><br />¡Felicitaciones!
                     </div>
                 </v-col>
             </v-row>

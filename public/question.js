@@ -22,7 +22,7 @@ Vue.component('question', {
         </v-row>
         <v-row class="align-center">
           <v-col>
-            <div class="title font-weight-regular font-italic text-justify" v-html="description"/>
+            <div class="title font-weight-regular text-left" v-html="description"/>
           </v-col>
         </v-row>
         <v-row class="align-center" v-if="image">

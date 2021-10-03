@@ -83,10 +83,13 @@
   function getNext(prevAnswer, image_url, user) {
     prevAnswer = prevAnswer.replace('.', ',');
     let ans = api.fetch('/reverse/\"' + prevAnswer + '\"');
+    return ans;
+  }
+
+  function save(prevAnswer, image_url, user){
     if(image_url)
       uploadImage(image_url, user)
     autoSave(prevAnswer, user);
-    return ans;
   }
 
   function autoSave(key, user){

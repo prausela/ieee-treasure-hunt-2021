@@ -61,8 +61,12 @@ new Vue({
                     this.printLoading();
                     auth.onAuthStateChanged((user) =>{
                         this.getNextQuestion(user, undefined);
+                        this.saveProgress(user, undefined)
                     })
                 } else {
+                    auth.onAuthStateChanged((user) =>{
+                        this.saveProgress(user, undefined);
+                    })
                     this.goToWinScreen();
                 }
             } else {
@@ -71,6 +75,7 @@ new Vue({
             this.input = '';
         },
         sendImages() {
+            
             let correctAnswer = true;
             if(this.last_question){
                 this.image_questions.forEach((image_question)=>{
@@ -78,7 +83,10 @@ new Vue({
                         correctAnswer = false
                 })
             }
+            
             if(!this.last_question || (this.last_question && correctAnswer) ){
+                this.image_questions = [];
+                this.answered = false;
                 this.errorText = '';
                 this.number++;
                 this.errorTextForImages = ''
@@ -86,23 +94,39 @@ new Vue({
                     this.printLoading();
                     auth.onAuthStateChanged((user) =>{
                         this.getNextQuestion(user, this.image_url);
+                        this.saveProgress(user, this.image_url)
                     })
                 } else {
+                    auth.onAuthStateChanged((user) =>{
+                        this.saveProgress(user, this.image_url);
+                    })
                     this.goToWinScreen();
                 }
             } else {
                 this.errorTextForImages = 'En la última pregunta debe ingresar las imagenes obligatoriamente para continuar'
+                this.image_questions.forEach((image_question)=>{
+                    this.image_url[image_question.image_upload_ref] = ''
+                })
             }
         },
         sendImagesLater() {
+            this.answered = false;
+            this.image_questions.forEach((image_question)=>{
+                this.image_url[image_question.image_upload_ref] = ''
+            })
+            this.image_questions = [];
             this.errorText = '';
             this.number++;
             if (this.number <= 16) {
                 this.printLoading();
                 auth.onAuthStateChanged((user) =>{
                     this.getNextQuestion(user, undefined);
+                    this.saveProgress(user, undefined)
                 })
             } else {
+                auth.onAuthStateChanged((user) =>{
+                    this.saveProgress(user, undefined);
+                })
                 this.goToWinScreen();
             }
         },
@@ -190,7 +214,9 @@ new Vue({
             }
             
         },
-
+        async saveProgress(user, image_url){
+            save(this.prevAnswer, image_url, user)
+        },
         async getNextQuestion(user, image_url) {
             let rta = await getNext(this.prevAnswer, image_url, user)
                 .catch((error) => {
@@ -207,15 +233,15 @@ new Vue({
         },
 		async goToWinScreen() {
             this.winner = true;
-			let rta = await getWinningCode()
+			/*let rta = await getWinningCode()
                 .catch((error) => {
                     console.error(error);
                 });
             if (rta) {
                 this.algorithm = rta.algorithm;
-                this.generateQr(this.getMessage(rta.code, rta.number));
+                //this.generateQr(this.getMessage(rta.code, rta.number));
                 updateWinNumber(rta.number);
-            }
+            }*/
 		}
     },
     computed: {
@@ -240,7 +266,13 @@ new Vue({
         auth.onAuthStateChanged((user) =>{
             getCurrentQuestion(user).then((ans)=>{
                 this.prevAnswer = ans;
-                this.getNextQuestion(user, undefined);
+                this.getNextQuestion(user, undefined).then(() => {
+                    if(this.number > 16){
+                        this.goToWinScreen();
+                    } else {
+                        this.saveProgress(user, undefined)
+                    }
+                });                
             }).catch(err => {
                 this.getNextQuestion(user, undefined);
             })
