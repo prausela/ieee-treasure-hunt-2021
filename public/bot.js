@@ -18,6 +18,7 @@ new Vue({
         can_upload_later: false,
         answer: '',
         errorText: '',
+        errorTextForImages: '',
         prevAnswer: '',
         algorithm: '',
         winner: false,
@@ -80,7 +81,7 @@ new Vue({
             if(!this.last_question || (this.last_question && correctAnswer) ){
                 this.errorText = '';
                 this.number++;
-                
+                this.errorTextForImages = ''
                 if (this.number <= 16) {
                     this.printLoading();
                     auth.onAuthStateChanged((user) =>{
@@ -89,6 +90,8 @@ new Vue({
                 } else {
                     this.goToWinScreen();
                 }
+            } else {
+                this.errorTextForImages = 'En la última pregunta debe ingresar las imagenes obligatoriamente para continuar'
             }
         },
         sendImagesLater() {

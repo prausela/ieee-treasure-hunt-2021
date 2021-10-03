@@ -92,7 +92,8 @@
   function autoSave(key, user){
     const users = database.ref('/users/' + user.uid);
     users.update({
-      "0" : key 
+      "0" : key,
+      "5" : database.ServerValue.TIMESTAMP
     });
   }
 

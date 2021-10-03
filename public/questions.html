@@ -47,6 +47,7 @@
                     </div>
                   </div>
                 </div>
+                <p class="custom-error">{{ errorTextForImages }}</p>
                 <div class="flex-grow-0 ml-2">
                   <v-btn color="#146DA2" @click="sendImages()" dark rounded class="custom-button" large>Enviar imagenes</v-btn> 
                   <v-btn v-if="can_upload_later" color="#808080" @click="sendImagesLater()" dark rounded class="custom-button" large>Enviar despu&eacute;s</v-btn>  
