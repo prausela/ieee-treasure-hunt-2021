@@ -1,4 +1,4 @@
-Vue.component('conclu', {
+Vue.component('thankyou', {
     data() {
         return {
             windowWidth: window.innerWidth,
@@ -9,20 +9,20 @@ Vue.component('conclu', {
             <logo :factor="5"></logo>
             <v-row class="align-center">
                 <v-col>
-                    <div class="display-2 text-center">¡Felicitaciones!</div>
+                    <div class="display-2 text-center"><br />¡Muchas gracias por participar!</div>
                 </v-col>
             </v-row>
             <v-row class="align-center">
                 <v-col>
                     <div class="headline text-center">
-                        ¡Has ganado!</br>
+                        <br />Desafortunadamente, la competencia termin&oacute; :'(<br />
                     </div>
                 </v-col>
             </v-row>
             <v-row class="align-center">
                 <v-col>
-                    <div class="title font-weight-regular font-italic text-center">
-                        No obstante, antes verificaremos que las imagenes subidas correspondan con las respuestas indicadas.<br /><br />¡Felicitaciones!
+                    <div class="title font-weight-regular text-center">
+                        Pronto anunciaremos a los ganadores por lo que les pedimos paciencia.<br />Agradecemos a todos los participantes y esperamos que les haya gustado :)
                     </div>
                 </v-col>
             </v-row>
