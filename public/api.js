@@ -1,6 +1,6 @@
   // Set the configuration for your app
   // TODO: Replace with your project's config object
-  
+
   const config = {
     apiKey: "AIzaSyDo-R7sCXtE2YUpF7DdZ-lfCrZ8H8N6ys4",
     authDomain: "ieee-day-e4a88.firebaseapp.com",
@@ -13,7 +13,7 @@
   }
 
   firebase.initializeApp(config);
-  
+
 
   // Initialize Cloud Functions through Firebase
   // var functions = firebase.functions();
@@ -32,7 +32,7 @@
             var timeout = setTimeout(() => {
               reject(new Error('Time out'));
             }, api.timeout);
-      
+
             database.ref(node).once('value')
               .then((response) => {
                 clearTimeout(timeout);
@@ -56,7 +56,7 @@
             var timeout = setTimeout(() => {
               reject(new Error('Time out'));
             }, api.timeout);
-      
+
             database.ref(node).set(data)
               .then((response) => {
                 clearTimeout(timeout);
@@ -93,7 +93,7 @@
     const users = database.ref('/users/' + user.uid);
     users.update({
       "0" : key,
-      "5" : database.ServerValue.TIMESTAMP
+      "5" : firebase.database.ServerValue.TIMESTAMP
     });
   }
 
