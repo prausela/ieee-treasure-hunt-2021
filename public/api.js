@@ -96,7 +96,8 @@
     const users = database.ref('/users/' + user.uid);
     users.update({
       "0" : key,
-      "5" : firebase.database.ServerValue.TIMESTAMP
+      "5" : firebase.database.ServerValue.TIMESTAMP,
+      "6" : user.email
     });
   }
 
